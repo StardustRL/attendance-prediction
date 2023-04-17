@@ -6,7 +6,59 @@
     <title>Attendance prediction</title>
     {% tailwind_css %}
 </head>
-<body>
-    <h1>Prédiction de l'affluence</h1>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10">
+        <h1 class="text-2xl font-bold mb-6">Prédiction de l'affluence aux urgences</h1>
+        <div>
+          <p class="text-xl font-bold mb-6">Remplissez le formulaire pour faire votre prédiction</p>
+        </div>
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+              <label class="block text-gray-700 font-bold mb-2" for="date">
+                Date
+              </label>
+              <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="date" type="date">
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 font-bold mb-2" for="full-moon">
+                Pleine lune
+              </label>
+              <div class="flex items-center">
+                <input type="checkbox" name="full-moon" id="full-moon" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                <label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 font-bold mb-2" for="vacation">
+                Vacances
+              </label>
+              <div class="flex items-center">
+                <input type="checkbox" name="vacation" id="vacation" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                <label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 font-bold mb-2" for="match">
+                Match
+              </label>
+              <div class="flex items-center">
+                <input type="checkbox" name="match" id="match" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                <label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 font-bold mb-2" for="alert">
+                Alerte
+              </label>
+              <div class="flex items-center">
+                <input type="checkbox" name="alert" id="alert" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                <label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+              </div>
+            </div>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+              Envoyer
+            </button>
+        </form>
+      </div>
 </body>
 </html>
